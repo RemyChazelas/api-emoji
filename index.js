@@ -4,6 +4,8 @@ const app = express();
 const emojis = require("./data.json");
 
 app.use(express.json());
+app.use(cors());
+
 
 
 
