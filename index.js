@@ -1,8 +1,10 @@
 const Joi = require('joi');
 const express = require('express');
-const app = express();
+const cors = require('cors');
 const emojis = require("./data.json");
+const app = express();
 
+app.use(cors());
 app.use(express.json());
 
 function validateEmoji(emoji) {
