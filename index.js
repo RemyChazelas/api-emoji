@@ -4,6 +4,8 @@ const cors = require('cors');
 const emojis = require("./data.json");
 const app = express();
 
+const randomEmoji = emojis[Math.floor(Math.random() * data.length)];
+
 app.use(cors());
 app.use(express.json());
 
@@ -18,7 +20,7 @@ function validateEmoji(emoji) {
 //GET***************************************************
 
 app.get('/', (req, res) => {
-    res.send(emojis)
+    res.send(randomEmoji)
 });
 
 app.get('/api/emojis', (req, res) => {
